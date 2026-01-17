@@ -18,3 +18,21 @@ let someNumber=23
 let stringNumber= String(someNumber)
 console.log(stringNumber)
 console.log(typeof stringNumber)
+//______operations_______
+
+let value=3
+let negValue=-value
+console.log(negValue)
+let str1="hello"
+let str2="dipa"
+let str3=str1+str2
+console.log(str3)
+
+console.log("1"+2+2)//122 
+// console.log(1+2+"2")//32//do not write this type of code
+
+let x = 3;
+let y = ++x;
+console.log(`x=${x} y=${y}`)
+//x++ in prefix returns the value before incrementing
+//++x in postfix returns the value after incrementing.

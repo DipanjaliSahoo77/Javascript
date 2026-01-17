@@ -1,4 +1,7 @@
+
+
 //array//
+
 const myArray=[1,2,4,5]
 console.log(myArray[0])//can access element of an array using indexing
 myArray.push(6)//it will push an element in the last
@@ -27,3 +30,29 @@ Removing: months.splice(1, 2) removes 2 elements starting at index 1.
 Adding: fruits.splice(1, 0, "Banana", "Orange") adds elements at index 1 without removing any.
 Replacing: tech.splice(2, 1, "JavaScript") removes 1 element at index 2 and adds "JavaScript". 
 */
+
+const first_name=["dipa","lopa","champa"];
+const last_name=["sahoo","mishar","prusty"]
+first_name.push(last_name)
+console.log(first_name)//it will give array within an array when we will push an array within n array and the push array consider an signle element here.
+
+const first_number=['1',"2","3"]
+const second_number=["4","5"]
+
+const total_number=first_number.concat(second_number)
+console.log(total_number)
+//spread operator
+const new_number=[...first_number,...second_number]
+console.log(new_number)
+
+const another_array=['1','2','3',['4','5'],'6','7',['8','9']]
+const real_array=another_array.flat(Infinity);
+console.log(real_array)
+
+console.log(Array.from("dipa"))//it will convert a string to an array
+console.log(Array.isArray("dipa"))//it will check array or not
+
+let num1=20
+let num2=30
+let num3=40
+console.log(Array.of(num1,num2,num3))

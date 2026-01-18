@@ -31,3 +31,49 @@ jsUser.greeting=function(){
     console.log(`hii${this.name}`)
 }
 console.log(jsUser.greeting())
+
+//const myUser=new Object()=> this is a singletone object
+//const myUser={}=>this is a non singletone object
+
+const myUser={}
+myUser.name="dipanjali"
+myUser.age=22
+myUser.isLoggedIn=false
+console.log(myUser)
+//object within object
+const regularUser={
+    email:"dipa@gmail.com",
+    fullname:{
+        userFullname:{
+            firstName:"dipa",
+            lastName:"sahoo"
+        }
+    }
+}
+console.log(regularUser.fullname.userFullname)
+//merge an object
+const obj1={1:"a",2:"b"}
+const obj2={3:"c",4:"d"}
+
+const obj3=Object.assign({},obj1,obj2)
+//or
+const obj4={...obj1,...obj2}
+console.log(obj3)
+console.log(obj4)
+const myalues=[
+    {
+        name:"dipanjali",
+        age:22
+    }
+]
+//to access object values in an array 
+const result=myalues[0].name
+console.log(result)
+console.log(myUser)
+//methods
+console.log(Object.keys(myUser))
+console.log(Object.values(myUser))
+console.log(Object.entries(myUser))
+console.log(myUser.hasOwnProperty('isLoggedIn'))
+
+

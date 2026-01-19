@@ -87,10 +87,11 @@ console.log(course.courseInstructor)
 const{courseInstructor:instructor}=course//destructure of an object
 console.log(instructor)
 
-{
-    "name":"dipanjali",//json
-    "age":22,
-}
+// {
+//   "name": "dipanjali",
+//   "age": 22
+// }
+
 //api are in json(javascript notation method) method
 
 

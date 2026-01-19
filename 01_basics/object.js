@@ -76,4 +76,21 @@ console.log(Object.values(myUser))
 console.log(Object.entries(myUser))
 console.log(myUser.hasOwnProperty('isLoggedIn'))
 
+const course={
+    coursename:"computerscience",
+    price:"300",
+    courseInstructor:"dipanjali"
+}
+//first way to access the values  in object
+console.log(course.courseInstructor)
+//second way to  acces s the values  in object
+const{courseInstructor:instructor}=course//destructure of an object
+console.log(instructor)
+
+{
+    "name":"dipanjali",//json
+    "age":22,
+}
+//api are in json(javascript notation method) method
+
 

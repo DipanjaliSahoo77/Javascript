@@ -149,3 +149,10 @@ const identification=[
 identification.forEach((item)=>{
   console.log(item.name)
 })
+//foreach() does not return any value
+//filter() return the value
+const myNums=[1,2,3,4,5,6,7]
+const newNums=myNums.filter((num)=>num>4)
+console.log(newNums)
+
+

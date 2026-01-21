@@ -16,8 +16,68 @@
         <h1 id='heading'>Dom concepts<span  style="display: none;">test text</span></h1>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et sequi aspernatur, quidem similique quasi, possimus unde quo sint commodi odit tempore cupiditate voluptatem explicabo praesentium? Rem minima debitis modi mollitia.
         </p>
+        <div>
+            <div class="parent">
+                <div class="day">Monday</div>
+                <div class="day">Tuesday</div>
+                <div class="day">Wednesday</div>
+            </div>
+        </div>
     </div>
+    <ul class="language">
+        <li>javascript</li>
+    </ul>
 </body>
+<script>
+    const parent=document.querySelector('.parent')
+    console.log(parent);
+    console.log(parent.children);
+    console.log(parent.children[1].innerHTML);
+
+    for (let index = 0; index < parent.children.length; index++) {
+        const element = parent.children[index].innerHTML;
+        console.log(element)
+        
+    }
+    parent.children[1].style.color="orange"
+
+    const div=document.createElement('div')
+    div.className='main'
+    div.id=Math.round(Math.random()*10+1)
+    div.setAttribute("title","generate title")
+    div.style.backgroundColor='green'
+    // div.innerText='dipanjali'
+    const addText=document.createTextNode("dipanjali")
+    div.appendChild(addText)
+
+    document.body.appendChild(div)
+
+    function addLanguage(langName){
+          const li=document.createElement('li');
+          li.innerHTML=`${langName}`
+          document.querySelector('.language').appendChild(li)
+    }
+    addLanguage('python')
+    addLanguage('typescript')
+
+    function addOptiLanguage(langName){
+        const li=document.createElement('li');
+        li.appendChild(document.createTextNode(langName))
+        document.querySelector('.language').appendChild(li)
+    }
+    addOptiLanguage('golang')
+    //edit
+    const secondLang=document.querySelector('li:nth-child(2)')
+    // secondLang.innerHTML='mojo'
+    //or
+    const newLi=document.createElement('li')
+    newLi.textContent='dipa'
+    secondLang.replaceWith(newLi)
+    //remove
+    const lastlang=document.querySelector('li:last-child')
+    lastlang.remove()
+
+</script>
 </html>
 <!-- Dom is a document object model means it specifies the structure of the document and it tells how  the page will look like -->
  

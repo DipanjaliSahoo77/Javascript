@@ -154,5 +154,36 @@ identification.forEach((item)=>{
 const myNums=[1,2,3,4,5,6,7]
 const newNums=myNums.filter((num)=>num>4)
 console.log(newNums)
+//map is a callback function and it automatically return the value
+const myNumbers=[1,2,3,4,5,6]
+const ourNums=myNumbers.map((num)=>num+10)
+console.log(ourNums)
+//when we open teh scope then use  return otherwise it will give an output as undefined 
+
+const hisNumbers=[1,2,3,4,5,6]
+const herNums=myNumbers.map((num)=>{ return num+10})
+console.log(herNums)
+
+//chaning method
+
+const dipaNum=hisNumbers
+.map((num)=>num*10)
+.map((num)=>num+1)
+.filter((num)=>num>=40)
+console.log(dipaNum)
+
+//reduce method
+const dipanjaliNum=[1,2,3]
+const result=dipanjaliNum.reduce(function(acc,currval){
+    console.log(`acc:${acc},ccurrval${currval}`)
+    return acc+currval
+},0)
+console.log(result)
+//using arrow function
+const myResult=dipanjaliNum.reduce((acc,currval)=>acc+currval,0)
+console.log(myResult)
+
+
+
 
 
